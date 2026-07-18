@@ -1,0 +1,1375 @@
+
+<!DOCTYPE html>
+<html lang="id" class="gate-lock">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Zidane Riski Ramadhani — Portofolio Web Developer &amp; Mahasiswa Informatika</title>
+<meta name="description" content="Portofolio M. Zidane Riski Ramadhani, mahasiswa Informatika yang membangun antarmuka dan sistem web dengan HTML, CSS, JavaScript, PHP, dan Python. Lihat proyek, keahlian, dan pengalaman.">
+<meta name="keywords" content="M. Zidane Riski Ramadhani, portofolio, web developer, mahasiswa informatika, front-end, full stack, UI UX">
+<meta name="author" content="M. Zidane Riski Ramadhani">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b111c">
+ 
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="M. Zidane Riski Ramadhani — Portofolio">
+<meta property="og:description" content="Mahasiswa Informatika yang membangun sistem dan antarmuka web dengan perhatian pada detail, dari logika hingga pengalaman pengguna.">
+<meta property="og:image" content="assets/hero.jpeg">
+<meta property="og:locale" content="id_ID">
+ 
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="M. Zidane Riski Ramadhani — Portofolio">
+<meta name="twitter:description" content="Mahasiswa Informatika yang membangun sistem dan antarmuka web dengan perhatian pada detail.">
+<meta name="twitter:image" content="assets/hero.jpeg">
+ 
+<!-- Favicon (motif gerbang/lampu, inline agar tak perlu file terpisah) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b111c'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23e3ab5f' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23e3ab5f'/%3E%3C/svg%3E">
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.jpeg" fetchpriority="high">
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "M. Zidane Riski Ramadhani",
+  "jobTitle": "Mahasiswa Informatika & Web Developer",
+  "affiliation": {"@type": "CollegeOrUniversity", "name": "Program Studi Informatika"},
+  "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Python", "Java", "UI/UX Design"],
+  "email": "mailto:zidane.riszki@example.com",
+  "sameAs": ["https://github.com/zidaneriszki", "https://linkedin.com/in/zidaneriszki"]
+}
+</script>
+<style>
+  :root{
+    --bg-void:#0b111c;
+    --bg-panel:#141d2b;
+    --bg-panel-raise:#000000;
+    --gate-bronze:#f5f1ef;
+    --gate-bronze-dim:#7d5638;
+    --lamp-amber:#e3ab5f;
+    --leaf-green:#4a6350;
+    --leaf-green-dim:#2c3b30;
+    --text-cream:#eee7da;
+    --text-muted:#98a1b3;
+    --text-faint:#5c6478;
+    --line:#df730710;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+  }
+ 
+  *{margin:0;padding:0;box-sizing:border-box;}
+ 
+  html{scroll-behavior:smooth;}
+ 
+  body{
+    background:var(--bg-void);
+    color:var(--text-cream);
+    font-family:var(--sans);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+ 
+  a{color:inherit;text-decoration:none;}
+ 
+  ::selection{background:var(--gate-bronze);color:var(--bg-void);}
+ 
+  /* focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--lamp-amber);
+    outline-offset:3px;
+  }
+ 
+  /* skip link (accessibility) */
+  .skip-link{
+    position:fixed; top:-60px; left:16px; z-index:1000;
+    background:var(--lamp-amber); color:var(--bg-void); font-family:var(--mono);
+    font-size:13px; padding:10px 16px; border-radius:2px; transition:top .2s ease;
+  }
+  .skip-link:focus{top:16px;}
+ 
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+ 
+  /* ---------- MOTION KEYFRAMES ---------- */
+  @keyframes fadeSlideUp{
+    from{opacity:0; transform:translateY(22px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  @keyframes floatY{
+    0%, 100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+  }
+  @keyframes pulseDot{
+    0%, 100%{opacity:0.55; transform:scale(1);}
+    50%{opacity:1; transform:scale(1.35);}
+  }
+  @keyframes marquee{
+    from{transform:translateX(0);} to{transform:translateX(-50%);}
+  }
+  @keyframes scrollHint{
+    0%, 100%{transform:translateY(0); opacity:0.5;}
+    50%{transform:translateY(8px); opacity:1;}
+  }
+ 
+  .wrap{max-width:1140px; margin:0 auto; padding:0 32px;}
+ 
+  /* ---------- NAV ---------- */
+  nav.topnav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 32px;
+    background:linear-gradient(to bottom, rgba(11,17,28,0.92), rgba(11,17,28,0));
+    backdrop-filter:blur(2px);
+    transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+  }
+  nav.topnav.scrolled{
+    background:rgba(11,17,28,0.86);
+    box-shadow:0 1px 0 var(--line);
+    padding:12px 32px;
+  }
+  .brand-tag{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:12px; letter-spacing:0.06em;
+    color:var(--text-muted);
+  }
+  .brand-tag .stripe{width:14px; height:9px; background:linear-gradient(180deg,#c53030 0 33%, #fff 33% 66%, transparent 66%); border:1px solid var(--gate-bronze-dim);}
+  .nav-links{display:flex; gap:6px; font-family:var(--mono); font-size:12px;}
+  .nav-links a{
+    position:relative;
+    padding:6px 12px; border:1px solid transparent; border-radius:2px;
+    color:var(--text-muted); letter-spacing:0.03em;
+    transition:color .2s, border-color .2s, background .2s;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:12px; right:12px; bottom:2px; height:1px;
+    background:var(--lamp-amber);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible,
+  .nav-links a.active{
+    color:var(--lamp-amber); border-color:var(--gate-bronze-dim); background:rgba(184,121,79,0.08);
+  }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after, .nav-links a.active::after{transform:scaleX(1);}
+ 
+  /* ---------- MOBILE NAV ---------- */
+  .nav-toggle{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:36px; height:32px; background:transparent; border:1px solid var(--line); border-radius:3px;
+    cursor:pointer; padding:0; z-index:101;
+  }
+  .nav-toggle span{width:18px; height:1.5px; background:var(--text-cream); margin:0 auto; transition:transform .25s ease, opacity .25s ease;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+ 
+  @media(max-width:760px){
+    .bg-customizer{top:78px; right:16px;}
+    .bg-toggle-btn{padding:8px 12px; font-size:11px;}
+    .nav-toggle{display:flex;}
+    .nav-links{
+      position:fixed; inset:0 0 auto 0; top:0; flex-direction:column; gap:0;
+      padding:88px 28px 28px; background:var(--bg-void);
+      border-bottom:1px solid var(--line);
+      transform:translateY(-100%); opacity:0; visibility:hidden;
+      transition:transform .35s cubic-bezier(.16,.8,.3,1), opacity .3s ease, visibility 0s linear .35s;
+      font-size:15px;
+    }
+    .nav-links.open{transform:translateY(0); opacity:1; visibility:visible; transition:transform .35s cubic-bezier(.16,.8,.3,1), opacity .3s ease;}
+    .nav-links a{padding:14px 4px; border-bottom:1px dashed var(--line); border-radius:0;}
+    .nav-links a::after{display:none;}
+  }
+ 
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex; align-items:flex-end;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute; inset:-6% -6%; z-index:0;
+    background-image:
+      linear-gradient(180deg, rgba(11,17,28,0.12) 0%, rgba(11,17,28,0.08) 30%, rgba(11,17,28,0.5) 58%, rgba(11,17,28,0.94) 88%, rgba(11,17,28,0.99) 100%),
+      linear-gradient(90deg, rgba(11,17,28,0.5) 0%, rgba(11,17,28,0.05) 42%),
+      url('assets/hero.jpeg');
+    background-size:cover;
+    background-position:center 8%;
+    will-change:transform;
+  }
+  .hero-inner{
+    width:100%; padding:0 32px 72px; max-width:1140px; margin:0 auto;
+    position:relative; z-index:1;
+  }
+  .hero-eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--lamp-amber);
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+    opacity:0; animation:fadeSlideUp .8s ease .15s forwards;
+  }
+  .hero-eyebrow::before{
+    content:''; width:26px; height:1px; background:var(--lamp-amber);
+  }
+  .hero h1{
+    font-family:var(--serif); font-weight:600;
+    font-size:clamp(2.4rem, 7vw, 5.2rem);
+    line-height:1.03; letter-spacing:-0.01em;
+    max-width:11ch;
+    text-shadow:0 4px 30px rgba(0,0,0,0.4);
+    opacity:0; animation:fadeSlideUp .9s ease .32s forwards;
+  }
+  .hero-role{
+    margin-top:20px; display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center;
+    opacity:0; animation:fadeSlideUp .9s ease .52s forwards;
+  }
+  .badge{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.03em;
+    padding:5px 12px; border:1px solid var(--gate-bronze-dim);
+    background:rgba(20,29,43,0.7);
+    color:var(--text-cream);
+    border-radius:2px;
+    display:inline-block;
+    animation:floatY 4.5s ease-in-out infinite;
+  }
+  .hero-role .badge:nth-child(2){animation-delay:0.4s;}
+  .hero-role .badge:nth-child(3){animation-delay:0.8s;}
+  .badge.amber{border-color:var(--lamp-amber); color:var(--lamp-amber);}
+ 
+  .hero-cta{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;
+    opacity:0; animation:fadeSlideUp .9s ease .68s forwards;
+  }
+  .btn{
+    font-family:var(--mono); font-size:13px; letter-spacing:0.03em;
+    padding:12px 22px; border-radius:2px; display:inline-flex; align-items:center; gap:8px;
+    transition:transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .btn-primary{background:var(--lamp-amber); color:var(--bg-void); border:1px solid var(--lamp-amber); font-weight:600;}
+  .btn-primary:hover, .btn-primary:focus-visible{background:#f0bd7c; transform:translateY(-2px);}
+  .btn-ghost{background:rgba(20,29,43,0.55); color:var(--text-cream); border:1px solid var(--line);}
+  .btn-ghost:hover, .btn-ghost:focus-visible{border-color:var(--gate-bronze-dim); color:var(--lamp-amber); transform:translateY(-2px);}
+ 
+  /* ---------- BACK TO TOP ---------- */
+  .to-top{
+    position:fixed; right:22px; bottom:22px; z-index:90;
+    width:44px; height:44px; border-radius:50%;
+    background:var(--bg-panel-raise); border:1px solid var(--line); color:var(--lamp-amber);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; visibility:hidden; transform:translateY(10px);
+    transition:opacity .25s ease, transform .25s ease, visibility 0s linear .25s, border-color .2s ease;
+    cursor:pointer;
+  }
+  .to-top.show{opacity:1; visibility:visible; transform:translateY(0); transition:opacity .25s ease, transform .25s ease;}
+  .to-top:hover, .to-top:focus-visible{border-color:var(--lamp-amber);}
+  .to-top svg{width:18px; height:18px;}
+  .hero-scroll{
+    position:absolute; right:32px; bottom:-40px; z-index:1;
+    font-family:var(--mono); font-size:11px; color:var(--text-faint);
+    writing-mode:vertical-rl; letter-spacing:0.1em;
+    display:none;
+    opacity:0; animation:fadeSlideUp .9s ease .8s forwards;
+  }
+  @media(min-width:900px){ .hero-scroll{display:flex; align-items:center; gap:8px;} }
+  .hero-scroll .line{width:1px; height:44px; background:var(--text-faint); position:relative; overflow:hidden;}
+  .hero-scroll .line::after{
+    content:''; position:absolute; left:0; top:0; width:100%; height:12px;
+    background:var(--lamp-amber);
+    animation:scrollHint 2.2s ease-in-out infinite;
+  }
+ 
+  /* ---------- HERO BACKGROUND CUSTOMIZER ---------- */
+  .bg-customizer{
+    position:absolute; right:24px; top:96px; z-index:150;
+    display:flex; flex-direction:column; align-items:flex-end; gap:8px;
+  }
+  .bg-toggle-btn{
+    display:flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:12px; letter-spacing:0.03em;
+    padding:10px 16px; border-radius:999px;
+    background:rgba(11,17,28,0.72); border:1px solid var(--line);
+    color:var(--text-cream); backdrop-filter:blur(4px);
+    cursor:pointer; transition:border-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .bg-toggle-btn:hover, .bg-toggle-btn:focus-visible{
+    border-color:var(--lamp-amber); color:var(--lamp-amber); transform:translateY(-1px);
+  }
+  .bg-toggle-btn svg{width:16px; height:16px; flex-shrink:0;}
+ 
+  .bg-panel{
+    width:250px; max-width:80vw;
+    background:rgba(11,17,28,0.94); border:1px solid var(--line); border-radius:10px;
+    padding:16px; backdrop-filter:blur(6px);
+    box-shadow:0 12px 32px rgba(0,0,0,0.45);
+    opacity:0; visibility:hidden; transform:translateY(-8px);
+    transition:opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+  }
+  .bg-panel.open{opacity:1; visibility:visible; transform:translateY(0); transition:opacity .2s ease, transform .2s ease;}
+  .bg-panel h4{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--text-faint); margin-bottom:10px; font-weight:500;
+  }
+  .bg-option-row{display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+  .bg-option-row:last-child{margin-bottom:0;}
+  .bg-swatches{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;}
+  .bg-swatch{
+    width:26px; height:26px; border-radius:50%; cursor:pointer;
+    border:2px solid rgba(255,255,255,0.25); transition:transform .15s ease, border-color .15s ease;
+    padding:0;
+  }
+  .bg-swatch:hover, .bg-swatch:focus-visible{transform:scale(1.12); border-color:var(--lamp-amber);}
+  .bg-swatch.active{border-color:var(--lamp-amber); box-shadow:0 0 0 2px var(--bg-void), 0 0 0 3px var(--lamp-amber);}
+  .bg-color-input{
+    width:34px; height:30px; border:1px solid var(--line); border-radius:6px;
+    background:transparent; cursor:pointer; padding:0;
+  }
+  .bg-file-btn{
+    flex:1; font-family:var(--mono); font-size:11.5px; text-align:center;
+    padding:9px 10px; border-radius:6px; border:1px dashed var(--line);
+    color:var(--text-muted); cursor:pointer; transition:border-color .2s, color .2s;
+  }
+  .bg-file-btn:hover{border-color:var(--lamp-amber); color:var(--lamp-amber);}
+  .bg-panel input[type="file"]{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+    clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+  .bg-panel-actions{display:flex; justify-content:space-between; align-items:center; margin-top:4px;}
+  .bg-reset-btn{
+    font-family:var(--mono); font-size:11px; color:var(--text-faint);
+    background:none; border:none; text-decoration:underline; cursor:pointer; padding:2px 0;
+  }
+  .bg-reset-btn:hover{color:var(--lamp-amber);}
+  .bg-status{font-family:var(--mono); font-size:10.5px; color:var(--leaf-green); min-height:14px;}
+ 
+ 
+  /* ---------- GATE DIVIDER (signature motif) ---------- */
+  .gate-divider{
+    width:100%; height:34px; display:block;
+    color:var(--gate-bronze-dim);
+    opacity:0.9;
+  }
+  .gate-divider circle{animation:pulseDot 2.6s ease-in-out infinite; transform-origin:600px 17px;}
+  .section-pad{padding:96px 0;}
+  .section-pad.tight{padding:72px 0;}
+ 
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{margin-bottom:52px; display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .section-num{
+    font-family:var(--mono); font-size:12px; color:var(--gate-bronze); letter-spacing:0.1em;
+    display:block; margin-bottom:10px;
+  }
+  .section-head h2{
+    font-family:var(--serif); font-weight:600; font-size:clamp(1.8rem, 3.4vw, 2.6rem);
+    background:linear-gradient(135deg, #fff7ea 0%, var(--lamp-amber) 45%, #f3d9ad 70%, var(--text-cream) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .section-sub{
+    font-family:var(--sans); color:var(--text-muted); max-width:38ch; font-size:15px;
+  }
+ 
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:64px; align-items:start;
+  }
+  @media(max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+  .about-lead{
+    font-family:var(--serif); font-size:1.35rem; line-height:1.5; color:var(--text-cream); font-weight:500;
+  }
+  .about-body{margin-top:22px; color:var(--text-muted); font-size:15.5px; max-width:56ch;}
+  .about-body p + p{margin-top:14px;}
+  .id-card{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:4px;
+    padding:26px 26px 22px; position:relative;
+  }
+  .id-card::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg, var(--gate-bronze), var(--lamp-amber), var(--leaf-green));
+  }
+  .id-row{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; padding:10px 0; border-bottom:1px dashed var(--line); font-size:13.5px;}
+  .id-row:last-child{border-bottom:none;}
+  .id-label{font-family:var(--mono); color:var(--text-faint); letter-spacing:0.04em; font-size:11.5px; text-transform:uppercase; flex-shrink:0;}
+  .id-value{color:var(--text-cream); font-weight:500; text-align:right;}
+ 
+  /* ---------- KEAHLIAN (skills) ---------- */
+  .skills-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; perspective:1200px;}
+  @media(max-width:900px){.skills-grid{grid-template-columns:repeat(2, 1fr);}}
+  @media(max-width:560px){.skills-grid{grid-template-columns:1fr;}}
+  .skill-row{
+    position:relative; padding:26px 24px 24px; border-radius:16px;
+    background:linear-gradient(160deg, rgba(26,36,52,0.62) 0%, rgba(14,20,32,0.8) 100%);
+    border:1px solid rgba(227,171,95,0.15);
+    box-shadow:0 20px 38px -22px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.04) inset;
+    transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+    overflow:hidden; transform-style:preserve-3d; will-change:transform;
+  }
+  .skill-row::after, .cap-card::after, .proj-card::after, .contact-link::after{
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(120deg, transparent 42%, rgba(255,247,234,0.14) 50%, transparent 58%);
+    transform:translateX(-130%);
+    transition:transform .85s ease;
+  }
+  .skill-row:hover::after, .cap-card:hover::after, .proj-card:hover::after, .contact-link:hover::after{
+    transform:translateX(130%);
+  }
+  .skill-row:hover{
+    border-color:rgba(227,171,95,0.42);
+    box-shadow:0 30px 50px -22px rgba(184,121,79,0.35), 0 1px 0 rgba(255,255,255,0.06) inset;
+  }
+  .skill-icon{
+    width:44px; height:44px; border-radius:12px; margin-bottom:16px;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, rgba(227,171,95,0.24), rgba(184,121,79,0.08));
+    border:1px solid rgba(227,171,95,0.28);
+    box-shadow:0 8px 18px -6px rgba(184,121,79,0.4);
+    color:var(--lamp-amber);
+    transition:box-shadow .32s ease, transform .32s ease;
+  }
+  .skill-row:hover .skill-icon{
+    box-shadow:0 8px 22px -4px rgba(227,171,95,0.65), 0 0 0 5px rgba(227,171,95,0.12);
+    transform:scale(1.06);
+  }
+  .skill-icon svg{width:22px; height:22px;}
+  .skill-top{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;}
+  .skill-name{font-family:var(--sans); font-weight:600; font-size:15px; color:var(--text-cream);}
+  .skill-pct{font-family:var(--mono); font-size:12px; color:var(--lamp-amber);}
+  .skill-track{height:7px; background:rgba(255,255,255,0.05); border-radius:4px; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,0.4) inset;}
+  .skill-fill{
+    position:relative; height:100%; border-radius:4px;
+    background:linear-gradient(90deg, var(--gate-bronze-dim), var(--lamp-amber), #fff4de);
+    width:0%; transition:width 1.1s cubic-bezier(.16,.8,.3,1);
+    overflow:hidden;
+  }
+  .skill-fill::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+    transform:translateX(-100%);
+    animation:fillShine 2.8s ease-in-out infinite;
+  }
+  @keyframes fillShine{ 0%{transform:translateX(-100%);} 55%{transform:translateX(220%);} 100%{transform:translateX(220%);} }
+ 
+  .tag-cloud{
+    margin-top:56px;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .tag-track{
+    display:flex; gap:10px; width:max-content;
+    animation:marquee 26s linear infinite;
+  }
+  .tag-cloud:hover .tag-track{animation-play-state:paused;}
+  .tag{
+    font-family:var(--mono); font-size:12.5px; padding:7px 13px; white-space:nowrap;
+    border:1px solid var(--line); border-radius:999px; color:var(--text-muted);
+    transition:border-color .2s, color .2s, transform .2s;
+  }
+  .tag:hover{border-color:var(--lamp-amber); color:var(--lamp-amber); transform:translateY(-2px);}
+ 
+  /* ---------- KEMAMPUAN (capabilities cards) ---------- */
+  .cap-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; perspective:1200px;}
+  @media(max-width:860px){.cap-grid{grid-template-columns:1fr;}}
+  .cap-card{
+    position:relative;
+    background:linear-gradient(160deg, rgba(26,36,52,0.62) 0%, rgba(14,20,32,0.8) 100%);
+    border:1px solid rgba(227,171,95,0.15); border-radius:16px;
+    padding:30px 26px;
+    box-shadow:0 20px 38px -22px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.04) inset;
+    transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+    overflow:hidden; transform-style:preserve-3d; will-change:transform;
+  }
+  .cap-card:hover{
+    border-color:rgba(227,171,95,0.42);
+    box-shadow:0 30px 50px -22px rgba(184,121,79,0.35), 0 1px 0 rgba(255,255,255,0.06) inset;
+  }
+  .cap-icon-wrap{
+    width:52px; height:52px; border-radius:14px; margin-bottom:18px;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, rgba(227,171,95,0.24), rgba(184,121,79,0.08));
+    border:1px solid rgba(227,171,95,0.28);
+    box-shadow:0 8px 18px -6px rgba(184,121,79,0.4);
+    transition:box-shadow .32s ease, transform .32s ease;
+  }
+  .cap-card:hover .cap-icon-wrap{
+    box-shadow:0 8px 22px -4px rgba(227,171,95,0.65), 0 0 0 5px rgba(227,171,95,0.12);
+    transform:scale(1.06);
+  }
+  .cap-icon{width:26px; height:26px; color:var(--lamp-amber); margin-bottom:0;}
+  .cap-card h3{font-family:var(--serif); font-size:1.15rem; font-weight:600; margin-bottom:10px; color:var(--text-cream);}
+  .cap-card p{font-size:14px; color:var(--text-muted);}
+ 
+  /* ---------- PENGALAMAN (timeline) ---------- */
+  .timeline{position:relative; padding-left:32px;}
+  .timeline::before{content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:linear-gradient(180deg, var(--lamp-amber), var(--gate-bronze-dim));}
+  .tl-item{
+    position:relative; padding:24px 26px; margin-bottom:20px; border-radius:14px;
+    background:linear-gradient(160deg, rgba(26,36,52,0.55) 0%, rgba(14,20,32,0.72) 100%);
+    border:1px solid rgba(227,171,95,0.14);
+    box-shadow:0 16px 34px -22px rgba(0,0,0,0.55);
+    transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .tl-item:last-child{margin-bottom:0;}
+  .tl-item:hover{transform:translateX(6px); border-color:rgba(227,171,95,0.4); box-shadow:0 20px 40px -20px rgba(184,121,79,0.3);}
+  .tl-item::before{
+    content:''; position:absolute; left:-33px; top:26px; width:11px; height:11px; border-radius:50%;
+    background:var(--lamp-amber); border:2px solid var(--bg-void);
+    box-shadow:0 0 0 4px rgba(227,171,95,0.16), 0 0 14px rgba(227,171,95,0.5);
+  }
+  .tl-period{font-family:var(--mono); font-size:12px; color:var(--lamp-amber); letter-spacing:0.04em;}
+  .tl-item h3{font-family:var(--serif); font-size:1.2rem; font-weight:600; margin:6px 0 6px; color:var(--text-cream);}
+  .tl-item .tl-org{font-size:13.5px; color:var(--text-faint); margin-bottom:8px; display:block;}
+  .tl-item p{font-size:14.5px; color:var(--text-muted); max-width:60ch;}
+ 
+  /* ---------- PROYEK (projects) ---------- */
+  .proj-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; perspective:1200px;}
+  @media(max-width:760px){.proj-grid{grid-template-columns:1fr;}}
+  .proj-card{
+    border:1px solid rgba(227,171,95,0.15); border-radius:16px; padding:30px 28px;
+    background:linear-gradient(160deg, rgba(26,36,52,0.62) 0%, rgba(14,20,32,0.8) 100%);
+    box-shadow:0 20px 38px -22px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.04) inset;
+    position:relative; overflow:hidden; transition:border-color .3s, transform .3s, box-shadow .3s;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .proj-card:hover{
+    border-color:rgba(227,171,95,0.42);
+    box-shadow:0 30px 50px -22px rgba(184,121,79,0.35), 0 1px 0 rgba(255,255,255,0.06) inset;
+  }
+  .proj-index{display:flex; align-items:center; gap:11px; font-family:var(--mono); font-size:12px; color:var(--text-faint); margin-bottom:18px; letter-spacing:0.04em; text-transform:uppercase;}
+  .proj-badge{
+    display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;
+    width:32px; height:32px; border-radius:50%;
+    background:linear-gradient(135deg, #f3d9ad 0%, var(--lamp-amber) 45%, var(--gate-bronze) 100%);
+    color:#241708; font-weight:700; font-size:12.5px;
+    box-shadow:0 8px 16px -5px rgba(184,121,79,0.55);
+  }
+  .proj-card h3{font-family:var(--serif); font-size:1.3rem; font-weight:600; margin-bottom:10px;}
+  .proj-card p{font-size:14.5px; color:var(--text-muted); margin-bottom:18px;}
+  .proj-tags{display:flex; flex-wrap:wrap; gap:8px;}
+  .proj-tags span{font-family:var(--mono); font-size:11px; color:var(--leaf-green); background:rgba(74,99,80,0.15); padding:4px 9px; border-radius:2px; border:1px solid var(--leaf-green-dim);}
+ 
+  /* ---------- KONTAK / footer ---------- */
+  footer{background:var(--bg-panel); border-top:1px solid var(--line); padding:80px 0 40px;}
+  .contact-inner{display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px; margin-bottom:56px;}
+  .contact-lead h2{
+    font-family:var(--serif); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:600; max-width:14ch; line-height:1.15;
+    background:linear-gradient(135deg, #fff7ea 0%, var(--lamp-amber) 45%, #f3d9ad 70%, var(--text-cream) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .contact-lead p{color:var(--text-muted); margin-top:14px; max-width:42ch; font-size:15px;}
+  .contact-links{display:flex; flex-direction:column; gap:12px;}
+  .contact-link{
+    position:relative; overflow:hidden;
+    display:flex; align-items:center; gap:14px; font-family:var(--mono); font-size:14px;
+    color:var(--text-cream); padding:14px 18px; border-radius:12px;
+    background:linear-gradient(160deg, rgba(26,36,52,0.55) 0%, rgba(14,20,32,0.72) 100%);
+    border:1px solid rgba(227,171,95,0.14);
+    box-shadow:0 14px 28px -20px rgba(0,0,0,0.55);
+    transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .contact-link:hover{
+    color:var(--lamp-amber); transform:translateX(6px) translateY(-2px);
+    border-color:rgba(227,171,95,0.42);
+    box-shadow:0 18px 34px -18px rgba(184,121,79,0.4);
+  }
+  .contact-link .icon-badge{
+    width:36px; height:36px; border-radius:10px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, rgba(227,171,95,0.24), rgba(184,121,79,0.08));
+    border:1px solid rgba(227,171,95,0.28);
+    color:var(--lamp-amber);
+  }
+  .contact-link svg{width:16px; height:16px; flex-shrink:0;}
+  .foot-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--mono); font-size:11.5px; color:var(--text-faint);}
+ 
+  /* fade-in on scroll */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+ 
+  /* ---------- ENTRY GATE (tampilan masuk, mewah & 3D) ---------- */
+  html.gate-lock, html.gate-lock body{overflow:hidden; height:100%;}
+  .entry-gate{
+    position:fixed; inset:0; z-index:500;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px; perspective:1400px;
+    background:
+      radial-gradient(60% 50% at 18% 12%, rgba(227,171,95,0.16) 0%, rgba(11,17,28,0) 60%),
+      radial-gradient(55% 45% at 85% 88%, rgba(184,121,79,0.14) 0%, rgba(11,17,28,0) 60%),
+      radial-gradient(120% 100% at 50% 0%, rgba(184,121,79,0.10) 0%, rgba(11,17,28,0) 55%),
+      linear-gradient(180deg, #0a0f18 0%, #0d1420 55%, #090d15 100%);
+    transition:opacity .55s ease, visibility 0s linear 0s;
+    overflow:hidden;
+  }
+  .entry-gate.gate-hidden{opacity:0; visibility:hidden; pointer-events:none; transition:opacity .55s ease, visibility 0s linear .55s;}
+  .entry-gate::before{
+    content:''; position:absolute; inset:0;
+    background-image:radial-gradient(rgba(238,231,218,0.05) 1px, transparent 1px);
+    background-size:26px 26px;
+    opacity:0.5; pointer-events:none;
+  }
+  .entry-gate-glow{
+    position:absolute; width:520px; height:520px; border-radius:50%;
+    background:radial-gradient(circle, rgba(227,171,95,0.20) 0%, rgba(227,171,95,0) 68%);
+    top:50%; left:50%; transform:translate(-50%,-50%);
+    filter:blur(4px); animation:glowPulse 6s ease-in-out infinite; pointer-events:none;
+  }
+  @keyframes glowPulse{
+    0%,100%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
+    50%{opacity:1; transform:translate(-50%,-50%) scale(1.08);}
+  }
+  .entry-gate-card{
+    position:relative; z-index:1;
+    width:100%; max-width:380px;
+    text-align:center;
+    padding:46px 34px 36px;
+    border-radius:22px;
+    background:linear-gradient(160deg, rgba(26,36,52,0.72) 0%, rgba(14,20,32,0.82) 100%);
+    -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px);
+    border:1px solid rgba(227,171,95,0.25);
+    box-shadow:
+      0 2px 0 rgba(255,255,255,0.05) inset,
+      0 30px 60px -18px rgba(0,0,0,0.65),
+      0 0 0 1px rgba(0,0,0,0.3),
+      0 0 60px rgba(184,121,79,0.10);
+    transform-style:preserve-3d;
+    animation:gateIn .8s cubic-bezier(.2,.8,.2,1) both;
+    transition:transform .25s ease;
+  }
+  .entry-gate-card::before{
+    content:''; position:absolute; inset:-1px; border-radius:22px; z-index:-1;
+    padding:1px;
+    background:linear-gradient(145deg, rgba(227,171,95,0.65), rgba(184,121,79,0.05) 30%, rgba(184,121,79,0.05) 70%, rgba(227,171,95,0.45));
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude;
+  }
+  @keyframes gateIn{
+    from{opacity:0; transform:translateY(24px) scale(.96) rotateX(6deg);}
+    to{opacity:1; transform:translateY(0) scale(1) rotateX(0deg);}
+  }
+  .entry-gate-photo-ring{
+    position:relative; width:148px; height:148px; margin:0 auto 24px;
+    border-radius:50%;
+    background:conic-gradient(from 0deg, var(--lamp-amber), #fff4de, var(--gate-bronze), var(--lamp-amber));
+    padding:4px;
+    box-shadow:0 12px 30px -8px rgba(184,121,79,0.55), 0 0 0 1px rgba(0,0,0,0.25);
+  }
+  .entry-gate-photo{
+    width:100%; height:100%; border-radius:50%;
+    overflow:hidden; background:var(--bg-void);
+    border:3px solid #0d1420;
+    box-shadow:0 0 0 1px rgba(227,171,95,0.3) inset;
+  }
+  .entry-gate-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .entry-gate-crown{
+    display:flex; justify-content:center; margin-bottom:12px; color:var(--lamp-amber);
+    filter:drop-shadow(0 2px 6px rgba(227,171,95,0.45));
+  }
+  .entry-gate-crown svg{width:22px; height:22px;}
+  .entry-gate-eyebrow{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--gate-bronze); margin-bottom:10px;
+  }
+  .entry-gate h2{
+    font-family:var(--serif); font-weight:600; font-size:clamp(26px,4.4vw,34px);
+    margin-bottom:8px; line-height:1.2;
+    background:linear-gradient(135deg, #fff7ea 0%, var(--lamp-amber) 45%, #f3d9ad 70%, #fff7ea 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .entry-gate-name{
+    font-family:var(--mono); font-size:13px; letter-spacing:0.04em;
+    color:var(--text-muted); margin-bottom:32px;
+    padding-bottom:22px; border-bottom:1px solid rgba(227,171,95,0.18);
+  }
+  .entry-gate-btn{
+    position:relative; overflow:hidden;
+    width:100%; padding:15px 16px; border-radius:10px; border:none; cursor:pointer;
+    font-family:var(--mono); font-size:13px; letter-spacing:0.06em; text-transform:uppercase;
+    background:linear-gradient(135deg, #f3d9ad 0%, var(--lamp-amber) 45%, var(--gate-bronze) 100%);
+    color:#241708; font-weight:700;
+    box-shadow:0 10px 24px -8px rgba(184,121,79,0.55), 0 1px 0 rgba(255,255,255,0.4) inset;
+    transition:filter .2s ease, transform .15s ease, box-shadow .2s ease;
+  }
+  .entry-gate-btn::after{
+    content:''; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+    transform:skewX(-20deg);
+    animation:btnShine 3.2s ease-in-out infinite;
+  }
+  @keyframes btnShine{
+    0%{left:-60%;} 45%{left:130%;} 100%{left:130%;}
+  }
+  .entry-gate-btn:hover, .entry-gate-btn:focus-visible{
+    filter:brightness(1.06); transform:translateY(-2px);
+    box-shadow:0 14px 30px -8px rgba(184,121,79,0.7), 0 1px 0 rgba(255,255,255,0.4) inset;
+  }
+  .entry-gate-btn:active{transform:translateY(0px) scale(.98);}
+  @media(max-width:480px){
+    .entry-gate-card{max-width:320px; padding:38px 24px 28px;}
+    .entry-gate-photo-ring{width:124px; height:124px;}
+  }
+</style>
+</head>
+<body>
+ 
+<div class="entry-gate" id="entryGate" role="dialog" aria-modal="true" aria-labelledby="entryGateTitle">
+  <div class="entry-gate-glow" aria-hidden="true"></div>
+  <div class="entry-gate-card" id="entryGateCard">
+    <div class="entry-gate-photo-ring">
+      <div class="entry-gate-photo">
+        <img src="assets/hero.jpeg" alt="Foto M. Zidane Riski Ramadhani">
+      </div>
+    </div>
+    <div class="entry-gate-crown" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8z"/></svg>
+    </div>
+    <div class="entry-gate-eyebrow">Portofolio Digital</div>
+    <h2 id="entryGateTitle">Selamat Datang</h2>
+    <div class="entry-gate-name">M. Zidane Riski Ramadhani</div>
+    <form id="entryGateForm">
+      <button type="submit" class="entry-gate-btn">Masuk ke Website</button>
+    </form>
+  </div>
+</div>
+ 
+ 
+<a class="skip-link" href="#tentang">Lewati ke konten utama</a>
+ 
+<nav class="topnav" id="topnav">
+  <div class="brand-tag"><span class="stripe"></span> M. ZRR / NPM 25312033</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#tentang">Tentang</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#kemampuan">Kemampuan</a>
+    <a href="#pengalaman">Pengalaman</a>
+    <a href="#proyek">Proyek</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Buka menu navigasi">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+ 
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+ 
+  <div class="bg-customizer">
+    <button type="button" class="bg-toggle-btn" id="bgToggleBtn" aria-expanded="false" aria-controls="bgPanel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+      <span>Atur Latar Belakang</span>
+    </button>
+ 
+    <div class="bg-panel" id="bgPanel">
+      <h4>Pilih Warna</h4>
+      <div class="bg-swatches" id="bgSwatches">
+        <button type="button" class="bg-swatch" data-color="#0b111c" style="background:#0b111c" aria-label="Navy gelap (default)"></button>
+        <button type="button" class="bg-swatch" data-color="#1a2434" style="background:#1a2434" aria-label="Biru abu"></button>
+        <button type="button" class="bg-swatch" data-color="#2c3b30" style="background:#2c3b30" aria-label="Hijau daun"></button>
+        <button type="button" class="bg-swatch" data-color="#3a2418" style="background:#3a2418" aria-label="Coklat gerbang"></button>
+        <button type="button" class="bg-swatch" data-color="#3a1f1f" style="background:#3a1f1f" aria-label="Merah bata"></button>
+        <button type="button" class="bg-swatch" data-color="#1f2a3a" style="background:#1f2a3a" aria-label="Biru dongker"></button>
+        <input type="color" class="bg-color-input" id="bgColorInput" value="#0b111c" aria-label="Warna kustom">
+      </div>
+ 
+      <h4>Atau Unggah Gambar</h4>
+      <div class="bg-option-row">
+        <label class="bg-file-btn" for="bgFileInput">Pilih gambar dari perangkat…</label>
+        <input type="file" id="bgFileInput" accept="image/*">
+      </div>
+ 
+      <div class="bg-panel-actions">
+        <button type="button" class="bg-reset-btn" id="bgResetBtn">Kembalikan default</button>
+        <span class="bg-status" id="bgStatus"></span>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Portofolio Digital · NPM 25312033</div>
+    <h1>M. Zidane Riski Ramadhani</h1>
+    <div class="hero-role">
+      <span class="badge amber">Mahasiswa Informatika</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#kontak">Hubungi Saya</a>
+      <a class="btn btn-ghost" href="#proyek">Lihat Proyek</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span class="line"></span>SCROLL</div>
+</header>
+ 
+<svg class="gate-divider" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true">
+  <line x1="0" y1="17" x2="1200" y2="17" stroke="currentColor" stroke-width="1"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <path d="M40,17 C40,6 56,6 56,17 C56,28 72,28 72,17"/>
+    <path d="M180,17 C180,6 196,6 196,17 C196,28 212,28 212,17"/>
+    <path d="M320,17 C320,6 336,6 336,17 C336,28 352,28 352,17"/>
+    <path d="M460,17 C460,6 476,6 476,17 C476,28 492,28 492,17"/>
+    <path d="M600,17 C600,6 616,6 616,17 C616,28 632,28 632,17"/>
+    <path d="M740,17 C740,6 756,6 756,17 C756,28 772,28 772,17"/>
+    <path d="M880,17 C880,6 896,6 896,17 C896,28 912,28 912,17"/>
+    <path d="M1020,17 C1020,6 1036,6 1036,17 C1036,28 1052,28 1052,17"/>
+    <path d="M1150,17 C1150,6 1166,6 1166,17 C1166,28 1182,28 1182,17"/>
+  </g>
+  <circle cx="600" cy="17" r="4" fill="currentColor"/>
+</svg>
+ 
+<!-- TENTANG -->
+<section class="section-pad" id="tentang">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-num">01 · Profil</span>
+        <h2>Tentang Saya</h2>
+      </div>
+      <p class="section-sub">Sekilas tentang siapa saya, apa yang saya kerjakan, dan pendekatan saya dalam membangun sesuatu.</p>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="about-lead">Mahasiswa Informatika yang membangun sistem dan antarmuka dengan perhatian pada detail — dari logika di baliknya sampai pengalaman yang dirasakan penggunanya.</p>
+        <div class="about-body">
+          <p>Saya M. Zidane Riski Ramadhani, saat ini menempuh pendidikan di Program Studi Informatika. Saya tertarik pada pengembangan perangkat lunak secara menyeluruh — mulai dari merancang logika program, membangun antarmuka yang rapi, hingga memastikan sistem berjalan stabil di dunia nyata.</p>
+          <p>Saya percaya bahwa kode yang baik bukan hanya soal berfungsi, tapi juga soal bisa dipahami, dirawat, dan dikembangkan lebih lanjut. Pendekatan ini yang saya bawa di setiap proyek, tugas, maupun organisasi yang saya ikuti.</p>
+        </div>
+      </div>
+      <div class="id-card reveal">
+        <div class="id-row"><span class="id-label">Nama Lengkap</span><span class="id-value">M. Zidane Riski Ramadhani</span></div>
+        <div class="id-row"><span class="id-label">NPM</span><span class="id-value">25312033</span></div>
+        <div class="id-row"><span class="id-label">Program Studi</span><span class="id-value"> S1.Informatika</span></div>
+        <div class="id-row"><span class="id-label">Fokus</span><span class="id-value">Pengembangan Web &amp; Sistem</span></div>
+        <div class="id-row"><span class="id-label">Status</span><span class="id-value">Terbuka untuk magang / proyek</span></div>
+        <div class="id-row"><span class="id-label">Kampus</span><span class="id-value">Universitas Teknorat Indonesia</span></div>
+        <div class="id-row"><span class="id-label">Lokasi</span><span class="id-value">Indonesia</span></div>
+      </div>
+      </div>
+    </div>
+</section>
+ 
+<svg class="gate-divider" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true">
+  <line x1="0" y1="17" x2="1200" y2="17" stroke="currentColor" stroke-width="1"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <path d="M40,17 C40,6 56,6 56,17 C56,28 72,28 72,17"/>
+    <path d="M180,17 C180,6 196,6 196,17 C196,28 212,28 212,17"/>
+    <path d="M320,17 C320,6 336,6 336,17 C336,28 352,28 352,17"/>
+    <path d="M460,17 C460,6 476,6 476,17 C476,28 492,28 492,17"/>
+    <path d="M600,17 C600,6 616,6 616,17 C616,28 632,28 632,17"/>
+    <path d="M740,17 C740,6 756,6 756,17 C756,28 772,28 772,17"/>
+    <path d="M880,17 C880,6 896,6 896,17 C896,28 912,28 912,17"/>
+    <path d="M1020,17 C1020,6 1036,6 1036,17 C1036,28 1052,28 1052,17"/>
+    <path d="M1150,17 C1150,6 1166,6 1166,17 C1166,28 1182,28 1182,17"/>
+  </g>
+  <circle cx="600" cy="17" r="4" fill="currentColor"/>
+</svg>
+ 
+<!-- KEAHLIAN -->
+<section class="section-pad" id="keahlian">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-num">02 · Teknis</span>
+        <h2>Keahlian</h2>
+      </div>
+      <p class="section-sub">Bahasa, framework, dan perangkat yang saya gunakan sehari-hari dalam mengembangkan proyek.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-row reveal">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3L4 12l4 9M16 3l4 9-4 9M14 3l-4 18"/></svg></div>
+        <div class="skill-top"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">90%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="90"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4v13a3 3 0 003 3M14 4h5v13a3 3 0 01-6 0v-1"/></svg></div>
+        <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">85%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3M9 12h6M9 15.5h6M9 9h2"/></svg></div>
+        <div class="skill-top"><span class="skill-name">Microsoft Word</span><span class="skill-pct">80%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg></div>
+        <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">75%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M15 9v11M3 14h18"/></svg></div>
+        <div class="skill-top"><span class="skill-name">Microsoft Excel</span><span class="skill-pct">70%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M7 21h14V7"/><circle cx="8" cy="9" r="1.6"/><path d="M3 15l4-3 3 2.5 4-4 3 2.5"/></svg></div>
+        <div class="skill-top"><span class="skill-name">Photoshop</span><span class="skill-pct">78%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-w="78"></div></div>
+      </div>
+    </div>
+    <div class="tag-cloud reveal">
+      <div class="tag-track">
+        <span class="tag">Git &amp; GitHub</span>
+        <span class="tag">HTML &amp; CSS</span>
+        <span class="tag">Microsoft Word</span>
+        <span class="tag">Microsoft Excel</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">Photoshop</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- KEMAMPUAN -->
+<section class="section-pad tight" id="kemampuan">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-num">03 · Kapasitas</span>
+        <h2>Kemampuan</h2>
+      </div>
+      <p class="section-sub">Kemampuan pendukung yang membentuk cara saya bekerja, di luar sekadar penguasaan teknis.</p>
+    </div>
+    <div class="cap-grid reveal">
+      <div class="cap-card">
+        <div class="cap-icon-wrap"><svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h16v12H4z"/><path d="M9 20h6M12 16v4"/></svg></div>
+        <h3>Problem Solving</h3>
+        <p>Terbiasa memecah masalah kompleks menjadi langkah kecil yang bisa dieksekusi dan diuji satu per satu.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon-wrap"><svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></div>
+        <h3>Kerja Tim</h3>
+        <p>Pernah bekerja dalam tim lintas peran, terbiasa berbagi progres secara jelas dan menerima masukan dengan terbuka.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon-wrap"><svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="5"/></svg></div>
+        <h3>Ketelitian &amp; Disiplin</h3>
+        <p>Menjaga konsistensi kualitas kode dan dokumentasi, dari perencanaan sampai serah terima proyek.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon-wrap"><svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19V7l8-4 8 4v12"/><path d="M9 19v-6h6v6"/></svg></div>
+        <h3>Adaptif Terhadap Teknologi</h3>
+        <p>Cepat mempelajari tools dan framework baru sesuai kebutuhan proyek yang sedang dikerjakan.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon-wrap"><svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+        <h3>Manajemen Waktu</h3>
+        <p>Mampu mengatur prioritas antara kuliah, organisasi, dan proyek pribadi tanpa mengorbankan kualitas.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon-wrap"><svg class="cap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></div>
+        <h3>Rasa Ingin Tahu</h3>
+        <p>Selalu mencari cara yang lebih baik untuk menyelesaikan sesuatu, bukan sekadar cara yang berhasil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<svg class="gate-divider" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true">
+  <line x1="0" y1="17" x2="1200" y2="17" stroke="currentColor" stroke-width="1"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <path d="M40,17 C40,6 56,6 56,17 C56,28 72,28 72,17"/>
+    <path d="M180,17 C180,6 196,6 196,17 C196,28 212,28 212,17"/>
+    <path d="M320,17 C320,6 336,6 336,17 C336,28 352,28 352,17"/>
+    <path d="M460,17 C460,6 476,6 476,17 C476,28 492,28 492,17"/>
+    <path d="M600,17 C600,6 616,6 616,17 C616,28 632,28 632,17"/>
+    <path d="M740,17 C740,6 756,6 756,17 C756,28 772,28 772,17"/>
+    <path d="M880,17 C880,6 896,6 896,17 C896,28 912,28 912,17"/>
+    <path d="M1020,17 C1020,6 1036,6 1036,17 C1036,28 1052,28 1052,17"/>
+    <path d="M1150,17 C1150,6 1166,6 1166,17 C1166,28 1182,28 1182,17"/>
+  </g>
+  <circle cx="600" cy="17" r="4" fill="currentColor"/>
+</svg>
+ 
+<!-- PENGALAMAN -->
+<section class="section-pad" id="pengalaman">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-num">04 · Rekam Jejak</span>
+        <h2>Pengalaman</h2>
+      </div>
+      <p class="section-sub">Perjalanan akademik dan organisasi yang membentuk kemampuan saya sejauh ini.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <span class="tl-period">2026 — Sekarang</span>
+        <h3>Mahasiswa Program Studi Informatika</h3>
+        <span class="tl-org">NPM 25312033</span>
+        <p>Menempuh mata kuliah inti pemrograman, struktur data, basis data, dan rekayasa perangkat lunak, sambil aktif mengerjakan proyek mandiri di luar kelas.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-period">2026 — Sekarang</span>
+        <h3>Anggota Organisasi HIMA Informatika</h3>
+        <span class="tl-org">Di Bidang Informatika</span>
+        <p>Terlibat dalam kegiatan kampus yang membutuhkan koordinasi tim, tanggung jawab lapangan, dan kedisiplinan — termasuk saat bertugas dalam seragam resmi organisasi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PROYEK -->
+<section class="section-pad tight" id="proyek">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-num">05 · Karya</span>
+        <h2>Proyek</h2>
+      </div>
+      <p class="section-sub">Beberapa proyek yang pernah saya kerjakan. Detail dapat disesuaikan dengan proyek nyata Anda.</p>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <span class="proj-index"><span class="proj-badge">01</span>Proyek</span>
+        <h3>Sistem Informasi Sederhana</h3>
+        <p>Aplikasi berbasis web untuk mengelola data dan proses administrasi dengan antarmuka yang ringkas dan mudah digunakan.</p>
+        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>
+JavaScript</span></div>
+      </div>
+      <div class="proj-card reveal">
+        <span class="proj-index"><span class="proj-badge">02</span>Proyek</span>
+        <h3>Website Portofolio Personal</h3>
+        <p>Situs profil pribadi dengan pendekatan desain custom, dibangun dari nol menggunakan HTML, CSS, dan JavaScript murni.</p>
+        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+      <div class="proj-card reveal">
+        <span class="proj-index"><span class="proj-badge">03</span>Proyek</span>
+        <h3>Aplikasi kasir</h3>
+        <p>Alat yag di buat sebebagi sistem kasir berbasis web yang dapat membantu proses transaksi penjualan secara cepat,akurat dan efesien.</p>
+        <div class="proj-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- KONTAK -->
+<footer id="kontak">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-lead reveal">
+        <h2>Mari terhubung dan berkolaborasi.</h2>
+        <p>Terbuka untuk diskusi proyek, kesempatan magang, atau sekadar bertukar ide seputar pengembangan web dan teknologi.</p>
+      </div>
+      <div class="contact-links reveal">
+        <a class="contact-link" href="mailto:zidane.riszki@example.com">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v14H4z"/><path d="M4 6l8 7 8-7"/></svg></span>
+          zidane.riski@gmil.com
+        </a>
+        <a class="contact-link" href="#">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2zM12 18h.01"/></svg></span>
+          +62 834534644
+        </a>
+        <a class="contact-link" href="#">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h.01M8 12h8M8 16h8"/></svg></span>
+          github.com/zidaneriski
+        </a>
+        <a class="contact-link" href="#">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 014 0v3M12 16v-5"/></svg></span>
+          linkedin.com/in/zidaneriski
+        </a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 M. Zidane Riski Ramadhani — NPM 25312033</span>
+      <span>Dibangun dengan HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+ 
+<button class="to-top" id="toTop" aria-label="Kembali ke atas halaman">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+ 
+<script>
+  // ---------- ENTRY GATE (tampil setiap kali web dibuka, mewah & 3D) ----------
+  (function(){
+    const gate = document.getElementById('entryGate');
+    const form = document.getElementById('entryGateForm');
+    const card = document.getElementById('entryGateCard');
+    const html = document.documentElement;
+ 
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      gate.classList.add('gate-hidden');
+      setTimeout(() => { html.classList.remove('gate-lock'); }, 560);
+    });
+ 
+    // efek tilt 3D mengikuti posisi mouse (hanya perangkat dengan mouse presisi)
+    if (window.matchMedia && window.matchMedia('(pointer: fine)').matches){
+      gate.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;   // 0..1
+        const py = (e.clientY - rect.top) / rect.height;   // 0..1
+        const rotateY = (px - 0.5) * 14;
+        const rotateX = (0.5 - py) * 14;
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      gate.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      });
+    }
+  })();
+ 
+  // ---------- TILT 3D UNTUK KARTU KEAHLIAN, KEMAMPUAN, PROYEK, KONTAK ----------
+  (function(){
+    if (!(window.matchMedia && window.matchMedia('(pointer: fine)').matches)) return;
+ 
+    const cards = document.querySelectorAll('.skill-row, .cap-card, .proj-card, .contact-link');
+    const MAX_TILT = 8;      // derajat maksimum kemiringan
+    const LIFT = 6;          // px terangkat saat hover
+ 
+    cards.forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;
+        const py = (e.clientY - rect.top) / rect.height;
+        const rotateY = (px - 0.5) * MAX_TILT;
+        const rotateX = (0.5 - py) * MAX_TILT;
+        el.style.transform = `translateY(-${LIFT}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
+      });
+    });
+  })();
+ 
+  // ---------- HERO BACKGROUND CUSTOMIZER ----------
+  (function(){
+    const heroBgEl = document.getElementById('heroBg');
+    const toggleBtn = document.getElementById('bgToggleBtn');
+    const panel = document.getElementById('bgPanel');
+    const swatchWrap = document.getElementById('bgSwatches');
+    const colorInput = document.getElementById('bgColorInput');
+    const fileInput = document.getElementById('bgFileInput');
+    const resetBtn = document.getElementById('bgResetBtn');
+    const statusEl = document.getElementById('bgStatus');
+ 
+    const STORAGE_TYPE_KEY = 'portfolioBgType';   // 'color' | 'image' | 'default'
+    const STORAGE_VALUE_KEY = 'portfolioBgValue';
+    const OVERLAY = "linear-gradient(180deg, rgba(11,17,28,0.12) 0%, rgba(11,17,28,0.08) 30%, rgba(11,17,28,0.5) 58%, rgba(11,17,28,0.94) 88%, rgba(11,17,28,0.99) 100%), linear-gradient(90deg, rgba(11,17,28,0.5) 0%, rgba(11,17,28,0.05) 42%)";
+    const DEFAULT_IMAGE = "url('assets/hero.jpeg')";
+ 
+    function showStatus(msg){
+      statusEl.textContent = msg;
+      if (msg) setTimeout(() => { if (statusEl.textContent === msg) statusEl.textContent = ''; }, 2200);
+    }
+ 
+    function applyImage(url, isDataUrl){
+      heroBgEl.style.backgroundImage = OVERLAY + ", url('" + url + "')";
+      heroBgEl.style.backgroundColor = '';
+      setActiveSwatch(null);
+    }
+ 
+    function applyColor(hex){
+      // solid color background, no photo, overlay still applied for consistency with text
+      heroBgEl.style.backgroundImage = "linear-gradient(180deg, rgba(11,17,28,0.05) 0%, rgba(11,17,28,0.35) 55%, rgba(11,17,28,0.92) 100%)";
+      heroBgEl.style.backgroundColor = hex;
+      setActiveSwatch(hex);
+      colorInput.value = hex;
+    }
+ 
+    function applyDefault(){
+      heroBgEl.style.backgroundImage = OVERLAY + ", " + DEFAULT_IMAGE;
+      heroBgEl.style.backgroundColor = '';
+      setActiveSwatch(null);
+    }
+ 
+    function setActiveSwatch(hex){
+      swatchWrap.querySelectorAll('.bg-swatch').forEach(sw => {
+        sw.classList.toggle('active', hex && sw.getAttribute('data-color') === hex);
+      });
+    }
+ 
+    function save(type, value){
+      try{
+        localStorage.setItem(STORAGE_TYPE_KEY, type);
+        if (value) localStorage.setItem(STORAGE_VALUE_KEY, value);
+        else localStorage.removeItem(STORAGE_VALUE_KEY);
+      }catch(e){ /* storage unavailable, still applies for this session */ }
+    }
+ 
+    // restore saved preference on load
+    try{
+      const type = localStorage.getItem(STORAGE_TYPE_KEY);
+      const value = localStorage.getItem(STORAGE_VALUE_KEY);
+      if (type === 'color' && value) applyColor(value);
+      else if (type === 'image' && value) applyImage(value);
+    }catch(e){ /* ignore */ }
+ 
+    // panel open/close
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', (e) => {
+      if (!panel.contains(e.target) && !toggleBtn.contains(e.target)){
+        panel.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape'){ panel.classList.remove('open'); toggleBtn.setAttribute('aria-expanded', 'false'); }
+    });
+ 
+    // preset color swatches
+    swatchWrap.querySelectorAll('.bg-swatch').forEach(sw => {
+      sw.addEventListener('click', () => {
+        const hex = sw.getAttribute('data-color');
+        applyColor(hex);
+        save('color', hex);
+        showStatus('Warna diterapkan');
+      });
+    });
+ 
+    // custom color picker
+    colorInput.addEventListener('input', () => {
+      const hex = colorInput.value;
+      applyColor(hex);
+      save('color', hex);
+      showStatus('Warna diterapkan');
+    });
+ 
+    // image upload
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      if (!file.type.startsWith('image/')){
+        showStatus('File harus berupa gambar');
+        return;
+      }
+      if (file.size > 8 * 1024 * 1024){
+        showStatus('Ukuran gambar maksimal 8MB');
+        return;
+      }
+      showStatus('Memuat gambar…');
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const dataUrl = ev.target.result;
+        applyImage(dataUrl);
+        save('image', dataUrl);
+        showStatus('Gambar diterapkan');
+      };
+      reader.onerror = () => showStatus('Gagal membaca gambar');
+      reader.readAsDataURL(file);
+    });
+ 
+    // reset to default
+    resetBtn.addEventListener('click', () => {
+      applyDefault();
+      save('default', null);
+      fileInput.value = '';
+      colorInput.value = '#0b111c';
+      showStatus('Dikembalikan ke default');
+    });
+  })();
+ 
+  // nav background on scroll
+  const nav = document.getElementById('topnav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+ 
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinksEl = document.getElementById('navLinks');
+  const navAnchors = navLinksEl.querySelectorAll('a');
+ 
+  function closeMobileNav(){
+    navToggle.setAttribute('aria-expanded', 'false');
+    navLinksEl.classList.remove('open');
+  }
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinksEl.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  navAnchors.forEach(a => a.addEventListener('click', closeMobileNav));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
+ 
+  // scroll-spy: highlight active nav link
+  const sections = Array.from(navAnchors).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spyIo = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = '#' + entry.target.id;
+      const link = navLinksEl.querySelector(`a[href="${id}"]`);
+      if (!link) return;
+      if (entry.isIntersecting){
+        navAnchors.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, {rootMargin: '-45% 0px -50% 0px', threshold: 0});
+  sections.forEach(s => spyIo.observe(s));
+ 
+  // back to top
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 600);
+  }, {passive:true});
+  toTop.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior: prefersReducedMotionQuery() ? 'auto' : 'smooth'});
+  });
+  function prefersReducedMotionQuery(){
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+ 
+  // reveal on scroll + skill bar fill
+  const revealEls = document.querySelectorAll('.reveal');
+  const fillEls = document.querySelectorAll('.skill-fill');
+ 
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+ 
+  revealEls.forEach(el => io.observe(el));
+ 
+  const fillIo = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        const w = entry.target.getAttribute('data-w');
+        entry.target.style.width = w + '%';
+        fillIo.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.4});
+ 
+  fillEls.forEach(el => fillIo.observe(el));
+ 
+  // respect reduced-motion preference for JS-driven motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+  // parallax on hero photo
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg && !prefersReducedMotion){
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight){
+        heroBg.style.transform = `translateY(${y * 0.18}px) scale(1.04)`;
+      }
+    }, {passive:true});
+  }
+ 
+  // cursor-tilt on id card and project cards
+  if (!prefersReducedMotion){
+    const tiltEls = document.querySelectorAll('.id-card, .proj-card');
+    tiltEls.forEach(card => {
+      card.style.transition = 'transform .25s ease, border-color .25s ease';
+      card.style.willChange = 'transform';
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width - 0.5;
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(700px) rotateX(${py * -5}deg) rotateY(${px * 6}deg) translateY(-2px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(700px) rotateX(0) rotateY(0) translateY(0)';
+      });
+    });
+  }
+</script>
+</body>
